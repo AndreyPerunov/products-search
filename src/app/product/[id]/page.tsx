@@ -163,9 +163,6 @@ const data = {
   ]
 }
 
-import Search from "../app/Search"
-import Navigation from "../app/Navigation"
-
 type Product = {
   id: number
   name: string
@@ -175,31 +172,32 @@ type Product = {
   description: string
 }
 
-export default function Home() {
-  const products: Product[] = data.products
+async function getProducts(id: string) {
+  return new Promise<Product | undefined>(resolve => {
+    setTimeout(() => {
+      resolve(data.products.find(item => item.id === Number(id)))
+    }, 1000)
+  })
+}
+
+export const metadata = {
+  title: "Product Page"
+}
+
+export default async function Page({ params }: { params: { id: string } }) {
+  const product: Product | undefined = await getProducts(params.id)
   return (
-    <>
-      <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-purple-700 to-pink-900 mb-3 ">Find Your Products</h1>
-      <p className="text-gray-600 font-medium mb-3">A simple way to find what you need!</p>
+    <article
+      className="h-full px-30 min-h-[70vh] rounded-lg bg-white p-10 shadow-lg flex flex-col relative
+      before:absolute before:w-full before:h-full before:-z-10 before:bg-gradient-to-r before:from-rose-400 before:via-fuchsia-500 before:to-indigo-500 before:right-5 before:top-5 before:blur-sm"
+    >
+      <p className="text-right font-medium text-gray-400 ">{product!.category}</p>
+      <h1 className="text-right text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-purple-700 to-pink-900 mb-20 ">{product!.name}</h1>
 
-      <Search />
-
-      <section className="place-items-stretch w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-12">
-        {products.map(product => (
-          <a key={product.id} href={"/product/" + product.id}>
-            <article className="h-full min-h-[14rem] rounded-lg bg-white  p-5 shadow-lg flex flex-col border-2 border-transparent hover:scale-110 transition hover:border-purple-700 ">
-              <p className="font-medium text-gray-400 ">{product.category}</p>
-              <h2 className="font-bold text-xl mb-4 ">{product.name}</h2>
-              <p className="flex-1 text-sm mb-4 ">{product.description}</p>
-              <p className="text-xl text-right font-semibold text-transparent bg-clip-text bg-gradient-to-tr from-purple-700 to-pink-900">
-                {product.price} {product.currency}
-              </p>
-            </article>
-          </a>
-        ))}
-      </section>
-
-      <Navigation />
-    </>
+      <p className="md:pl-40 text-right flex-1 text-lg mb-2 ">{product!.description}</p>
+      <p className="text-3xl text-right font-semibold text-transparent bg-clip-text bg-gradient-to-tr from-purple-700 to-pink-900">
+        {product!.price} {product!.currency}
+      </p>
+    </article>
   )
 }
