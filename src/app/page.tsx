@@ -179,7 +179,7 @@ export default function Home() {
   const products: Product[] = data.products
   return (
     <>
-      <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-purple-700 to-pink-900 mb-3 ">Find Your Products</h1>
+      <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-purple-700 to-pink-900 mb-3 dark:from-purple-500 dark:to-pink-700">Find Your Products</h1>
       <p className="text-gray-600 font-medium mb-3">A simple way to find what you need!</p>
 
       <Search />
@@ -187,11 +187,11 @@ export default function Home() {
       <section className="place-items-stretch w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-12">
         {products.map(product => (
           <a key={product.id} href={"/product/" + product.id}>
-            <article className="h-full min-h-[14rem] rounded-lg bg-white  p-5 shadow-lg flex flex-col border-2 border-transparent hover:scale-110 transition hover:border-purple-700 ">
-              <p className="font-medium text-gray-400 ">{product.category}</p>
-              <h2 className="font-bold text-xl mb-4 ">{product.name}</h2>
-              <p className="flex-1 text-sm mb-4 ">{product.description}</p>
-              <p className="text-xl text-right font-semibold text-transparent bg-clip-text bg-gradient-to-tr from-purple-700 to-pink-900">
+            <article className="h-full min-h-[14rem] rounded-lg bg-white dark:bg-slate-800 p-5 shadow-lg flex flex-col border-2 border-transparent hover:scale-110 transition hover:border-purple-700 dark:hover:border-purple-500">
+              <p className="font-medium text-gray-400 dark:text-slate-500">{product.category}</p>
+              <h2 className="font-bold text-xl mb-4 dark:text-slate-100">{product.name}</h2>
+              <p className="flex-1 text-sm mb-4 dark:text-slate-400">{product.description}</p>
+              <p className="text-xl text-right font-semibold text-transparent bg-clip-text bg-gradient-to-tr from-purple-700 to-pink-900 dark:from-purple-400 dark:to-pink-400">
                 {product.price} {product.currency}
               </p>
             </article>
