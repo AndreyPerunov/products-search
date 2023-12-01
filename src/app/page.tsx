@@ -54,7 +54,15 @@ export default async function Home({ searchParams }: { searchParams?: { [key: st
           </a>
         ))}
       </section>
-      <Navigation page={page} pagesNumber={pagesNumber} search={search} />
+
+      {productsPaginated.length === 0 && (
+        <>
+          <p className="text-center text-gray-600 font-medium">No products found</p>
+          <p className="text-center text-gray-600 text-7xl mb-10 mt-5">:(</p>
+        </>
+      )}
+
+      {productsPaginated.length > 0 && <Navigation page={page} pagesNumber={pagesNumber} search={search} />}
     </>
   )
 }
