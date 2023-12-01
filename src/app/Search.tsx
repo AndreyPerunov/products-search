@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 
 export default function Search() {
-  const [placeholder, setPlaceholder] = useState<string>("...")
+  const [placeholder, setPlaceholder] = useState<string>("🔍")
   const [search, setSearch] = useState<string>("")
   const [debouncedSearch, setDebouncedSearch] = useState<string>("")
   const router = useRouter()
@@ -11,7 +11,7 @@ export default function Search() {
   useEffect(() => {
     const possibleSearches = ["ice cream", "sweet bananas", "grilling", "baking", "fresh", "meat", "seafood", "fruits", "bakery", "dairy", "vegetables", "sweets", "pasta", "snacks", "crunchy", "vanilla ice cream", "juicy sausages", "probiotic-rich yogurt", "grain bread", "breakfast essential"]
     // Choose a random placeholder
-    setPlaceholder(possibleSearches[Math.floor(Math.random() * possibleSearches.length)])
+    setPlaceholder("🔍 " + possibleSearches[Math.floor(Math.random() * possibleSearches.length)])
   }, [])
 
   // Debouncing search
