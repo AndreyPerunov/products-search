@@ -19,6 +19,15 @@ export const metadata = {
 
 export default async function Page({ params }: { params: { id: string } }) {
   const product: Product | undefined = await getProducts(params.id)
+
+  if (!product)
+    return (
+      <div className="h-full px-30  min-h-[70vh] rounded-lg bg-gray-200 dark:bg-slate-700 p-5 shadow-lg flex flex-col items-center justify-center">
+        <p className="text-center text-gray-800 text-xl font-medium">Product does not exist</p>
+        <p className="text-center text-gray-800 text-8xl mb-10 mt-5">:(</p>
+      </div>
+    )
+
   return (
     <article
       className="h-full px-30 min-h-[70vh] rounded-lg bg-white dark:bg-slate-800 p-10 shadow-lg flex flex-col relative
