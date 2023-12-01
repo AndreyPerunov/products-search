@@ -2,9 +2,9 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 
-export default function Search() {
+export default function Search({ initialSearch }: { initialSearch?: string }) {
   const [placeholder, setPlaceholder] = useState<string>("🔍")
-  const [search, setSearch] = useState<string>("")
+  const [search, setSearch] = useState<string>(initialSearch || "")
   const [debouncedSearch, setDebouncedSearch] = useState<string>("")
   const router = useRouter()
 
