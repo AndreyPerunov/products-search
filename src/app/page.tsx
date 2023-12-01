@@ -175,9 +175,9 @@ type Product = {
   description: string
 }
 
-export default async function Home({ searchParams }: { searchParams?: { [key: string]: string | string[] | undefined } }) {
+export default async function Home({ searchParams }: { searchParams?: { [key: string]: string | undefined } }) {
   const products: Product[] = data.products
-  const search = typeof searchParams?.search === "string" ? searchParams.search : undefined
+  const search = searchParams?.search || ""
 
   return (
     <>
