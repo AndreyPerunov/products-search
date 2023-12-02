@@ -14,7 +14,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## How it works
 
-Check out [docs](/src/docs) to see how it works.
+Check out [docs](/docs) to see how it works.
 
 Tech stack:
 
