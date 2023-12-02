@@ -39,8 +39,8 @@ Tech stack:
 
 ## Potential improvements
 
-- improve single product page design
+- improve single product page responsive design
 - add filtering feature by categories
 - add sorting feature by price
-- add 'choose number of products dislpayed' feature
+- add 'choose number of products displayed' feature
 - add buttons to choose specific page number
