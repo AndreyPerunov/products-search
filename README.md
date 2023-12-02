@@ -1,11 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Products Search app
 
-## Getting Started
+> Search app for products
 
-First, run the development server:
+## Installation
+
+Clone repo and run
 
 ```
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## How it works
+
+Check out [docs](/src/docs) to see how it works.
+
+Tech stack:
+
+- React.js
+- Next.js
+- Tailwind
+- TypeScript
