@@ -8,7 +8,7 @@ Table of Contents
 
 - [Component initialization](https://github.com/AndreyPerunov/products-search/blob/main/docs/SingleProductPage.md#component-initialization)
 - [Fetching data](https://github.com/AndreyPerunov/products-search/blob/main/docs/SingleProductPage.md#fetching-data)
-- [If there is no products](https://github.com/AndreyPerunov/products-search/blob/main/docs/SingleProductPage.md#if-there-is-no-products)
+- [If there is no product](https://github.com/AndreyPerunov/products-search/blob/main/docs/SingleProductPage.md#if-there-is-no-product)
 
 ## Component initialization
 
