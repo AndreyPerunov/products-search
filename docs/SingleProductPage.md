@@ -12,7 +12,7 @@ Table of Contents
 
 ## Component initialization
 
-This component gets `id` of a **product** from [params](https://nextjs.org/docs/app/api-reference/file-conventions/page#searchparams-optional)
+This component gets `id` of a **product** from [params](https://nextjs.org/docs/app/api-reference/file-conventions/page#params-optional)
 
 ## Fetching data
 
