@@ -46,3 +46,6 @@ Tech stack:
 - add sorting feature by price
 - add 'choose number of products displayed' feature
 - add buttons to choose specific page number
+- improve search
+  - make it search by keywords instead of `.includes`
+  - make it accept typo mistakes
