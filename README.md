@@ -2,6 +2,8 @@
 
 > Server side search app for products
 
+![alt text](https://github.com/AndreyPerunov/products-search/blob/main/docs/dark-theme.png "Screenshot of a dark theme")
+
 ## Installation
 
 Clone repo and run
