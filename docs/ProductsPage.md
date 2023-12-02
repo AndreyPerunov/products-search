@@ -6,11 +6,11 @@ Check out the [code](/src/app/page.tsx).
 
 Table of Contents
 
-- [Component initialization](https://github.com/AndreyPerunov/products-search/edit/main/docs/ProductsPage.md#component-initialization)
-- [Fetching data](https://github.com/AndreyPerunov/products-search/edit/main/docs/ProductsPage.md#fetching-data)
-- [Filtering](https://github.com/AndreyPerunov/products-search/edit/main/docs/ProductsPage.md#filtering)
-- [Pagination](https://github.com/AndreyPerunov/products-search/edit/main/docs/ProductsPage.md#pagination)
-- [If there is no products](https://github.com/AndreyPerunov/products-search/edit/main/docs/ProductsPage.md#if-there-is-no-products)
+- [Component initialization](https://github.com/AndreyPerunov/products-search/blob/main/docs/ProductsPage.md#component-initialization)
+- [Fetching data](https://github.com/AndreyPerunov/products-search/blob/main/docs/ProductsPage.md#fetching-data)
+- [Filtering](https://github.com/AndreyPerunov/products-search/blob/main/docs/ProductsPage.md#filtering)
+- [Pagination](https://github.com/AndreyPerunov/products-search/blob/main/docs/ProductsPage.md#pagination)
+- [If there is no products](https://github.com/AndreyPerunov/products-search/blob/main/docs/ProductsPage.md#if-there-is-no-products)
 
 ## Component initialization
 
